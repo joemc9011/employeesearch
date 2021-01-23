@@ -1,5 +1,7 @@
 import React from "react";
 import Title from "./components/Title";
+import Form from "./components/Form";
+import Wrapper from "./components/Wrapper";
 
 // import compontents here
 
@@ -7,9 +9,12 @@ import Title from "./components/Title";
 // build app tree of compontents here
 function App() {
     return (
-        <Title/>
-    )
+        <Wrapper>
+            <Title />
+            <Form />
+        </Wrapper>
 
+    );
 }
- 
+
 export default App;

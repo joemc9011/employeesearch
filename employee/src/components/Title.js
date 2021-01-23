@@ -1,6 +1,6 @@
 import React from "react";
 
-function Title(props) {
+function Title() {
   return (<h1 className="title">Employee Search</h1>);
 }
 
