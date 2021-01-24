@@ -1,20 +1,17 @@
 import React from "react";
 
-function EmployeeTable (props) {
-    return (<div>
+function EmployeeTable(props) {
+    return (
+        <thead>
+         <tr>
+          <th> </th>
+          <td>{props.name}</td>
+            <td>{props.email}</td>
+             <td>{props.phone}</td>
 
-   
-        <table className="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone</th>
-    </tr>
-  </thead>
-</table>
-</div>
+         
+           </tr>
+        </thead>
     );
 }
 
