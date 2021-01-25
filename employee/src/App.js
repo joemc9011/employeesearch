@@ -17,7 +17,13 @@ class App extends React.Component {
 
         searchEmployees = query => {
             API.search(query)
-                .then(res => this.setState({ employees: res.data }))
+                .then(res => this.setState({ employees: res.data.results.map((emp, id) => ({
+                    name: emp.name,
+                    email: emp.email,
+                    phone:emp.phone,
+                    key: id
+                })),
+            }))
                 .catch(err => console.log(err));
         };
 
