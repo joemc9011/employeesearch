@@ -12,11 +12,7 @@ class App extends React.Component {
     };
 
     componentDidMount() {
-        this.searchEmployees("John");
-    }
-
-        searchEmployees = query => {
-            API.search(query)
+            API.search()
                 .then(res => this.setState({ employees: res.data.results.map((emp, id) => ({
                     name: emp.name,
                     email: emp.email,
