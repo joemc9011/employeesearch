@@ -13,6 +13,7 @@ class App extends React.Component {
 
     componentDidMount() {
         this.searchEmployees("John");
+    }
 
         searchEmployees = query => {
             API.search(query)
@@ -30,7 +31,7 @@ class App extends React.Component {
 
         handleFormSubmit = event => {
             event.preventDefault();
-            this.getEmployeesNames(this.state.search)
+            this.getEmployeesNames(this.state.search);
         };
 
         render() {
@@ -47,7 +48,11 @@ class App extends React.Component {
                 </div>
             );
         }
-    }
+        
 
+        
+
+    
+}
 
     export default App;
