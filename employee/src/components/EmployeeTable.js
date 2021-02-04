@@ -1,12 +1,11 @@
 import React from "react";
-import "./employee.css"
-
 import EmployeeTableHeaders from "./EmployeeTableHeaders";
+import "./fulltable.css"
 
 
 function EmployeeRow({data}) {
     return (
-        <tr>
+        <tr className = "tablerowbody">
         <td> {`${data.name.first} ${data.name.last}`}</td>
             <td>{data.email}</td>
             <td>{data.phone}</td>
@@ -18,7 +17,7 @@ function EmployeeRow({data}) {
 
  function EmployeeTable({employees}) {
     return (
-        <table>
+        <table className="tablebody">
             <EmployeeTableHeaders />
             <tbody>
             {

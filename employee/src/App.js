@@ -1,7 +1,9 @@
 import React from "react";
 import EmployeeTable from "./components/EmployeeTable"
 import Search from "./components/Search";
+import Header from "./components/Header"
 import API from "./utils/API";
+import "./app.css"
 
 
 // import compontents here
@@ -40,7 +42,7 @@ class App extends React.Component {
         event.preventDefault();
         const {search} = this.state
         let results = this.state.employees.filter(item => {
-            return `${item.name.first} ${item.name.last}`.includes(search) || item.email.includes(search) || item.phone.includes(search) || item.age.includes(search) || item.picture(search)
+            return `${item.name.first} ${item.name.last}`.includes(search) || item.email.includes(search) || item.phone.includes(search) || item.dob.age.includes(search) || item.picture.thumbnail(search)
         })
         console.log(results)
         this.setState({results})
@@ -49,7 +51,8 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="body">
+                <Header/>
                 <Search
                     search={this.state.search}
                     handleInputChange={this.handleInputChange}
