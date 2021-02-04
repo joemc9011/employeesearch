@@ -1,17 +1,33 @@
 import React from "react";
+import "./employee.css"
 
-function EmployeeTable(props) {
+import EmployeeTableHeaders from "./EmployeeTableHeaders";
+
+
+function EmployeeRow({data}) {
     return (
-        <thead>
-         <tr>
-          <th> </th>
-          <td>{props.name}</td>
-            <td>{props.email}</td>
-             <td>{props.phone}</td>
+        <tr>
+        <td> {`${data.name.first} ${data.name.last}`}</td>
+            <td>{data.email}</td>
+            <td>{data.phone}</td>
+            <td>{data.age}</td>
+        </tr>
+    )
+}
 
-         
-           </tr>
-        </thead>
+
+ function EmployeeTable({employees}) {
+    return (
+        <table>
+            <EmployeeTableHeaders />
+            <tbody>
+            {
+                employees.map((employee) => {
+                    return <EmployeeRow data={employee}/>
+                })
+            }
+            </tbody>
+        </table>
     );
 }
 

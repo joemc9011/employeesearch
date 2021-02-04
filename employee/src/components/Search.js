@@ -7,11 +7,11 @@ function SearchForm(props) {
         <label htmlFor="search">Search:</label>
         <input
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.search}
           name="search"
           type="text"
           className="form-control"
-          placeholder="Search For an employee"
+          placeholder="Search for an employee"
           id="search"
         />
         <br />
