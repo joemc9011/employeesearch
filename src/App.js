@@ -42,7 +42,7 @@ class App extends React.Component {
         event.preventDefault();
         const {search} = this.state
         let results = this.state.employees.filter(item => {
-            return `${item.name.first} ${item.name.last}`.includes(search) || item.email.includes(search) || item.phone.includes(search) || item.dob.age.includes(search)
+            return `${item.name.first} ${item.name.last}`.includes(search) || item.email.includes(search) || item.phone.includes(search) 
         })
         console.log(results)
         this.setState({results})
